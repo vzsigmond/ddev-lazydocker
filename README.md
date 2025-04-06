@@ -15,7 +15,7 @@ This addon integrates [LazyDocker](https://github.com/jesseduffield/lazydocker) 
 From your project directory:
 
 ```bash
-ddev add-on get <your-github-username>/ddev-addon-lazydocker
+ddev add-on get vzsigmond/dddev-lazydocker
 ddev restart
 ```
 
@@ -29,15 +29,14 @@ ddev lazydocker
 
 ## 📝 License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the [MIT License](https://github.com/vzsigmond/ddev-lazydocker/blob/main/LICENSE). See the LICENSE file for details.
 
 ## 🤝 Contributing
 
 Feel free to submit issues or pull requests if you encounter bugs or have suggestions for improvement. Contributions are always welcome!
 
 ## 🙌 Credits
-[Jesse Duffield](https://github.com/jesseduffield/) – Creator of LazyDocker
-DDEV Team – For the excellent local development tool
-
+- [Jesse Duffield](https://github.com/jesseduffield/) – Creator of LazyDocker
+- DDEV Team – For the excellent local development tool
 
 Enjoy a smoother Docker workflow! 🐳✨
