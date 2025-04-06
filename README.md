@@ -16,6 +16,9 @@ From your project directory:
 
 ```bash
 ddev add-on get vzsigmond/dddev-lazydocker
+```
+
+```bash
 ddev restart
 ```
 
