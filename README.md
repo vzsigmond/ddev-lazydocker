@@ -30,6 +30,10 @@ ddev lazydocker
 
 ## 🧼 Uninstallation
 
+```bash
+ddev add-on remove vzsigmond/ddev-lazydocker
+```
+
 ## 📝 License
 
 This project is licensed under the [MIT License](https://github.com/vzsigmond/ddev-lazydocker/blob/main/LICENSE). See the LICENSE file for details.
