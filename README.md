@@ -15,7 +15,7 @@ This addon integrates [LazyDocker](https://github.com/jesseduffield/lazydocker) 
 From your project directory:
 
 ```bash
-ddev add-on get vzsigmond/dddev-lazydocker
+ddev add-on get vzsigmond/ddev-lazydocker
 ```
 
 ```bash
