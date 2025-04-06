@@ -1,5 +1,10 @@
 #!/bin/bash
 
+## #ddev-generated: If you want to edit and own this file, remove this line.
+## Description: Open LazyDocker in interactive mode for the current DDEV project
+## Usage: lazydocker
+## Example: "ddev lazydocker"
+
 # Ensure DDEV is installed
 if ! command -v ddev &>/dev/null; then
   echo "❌ DDEV is not installed. Please install it first."
@@ -22,4 +27,4 @@ if [[ -z "$SITE" ]]; then
 fi
 
 # Run LazyDocker in interactive TUI
-docker exec -it ddev-${SITE}-lazydocker lazydocker
+docker exec -it ddev-${SITE}-lazydocker lazydocker $@

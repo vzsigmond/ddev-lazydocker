@@ -2,18 +2,15 @@
 services:
   lazydocker:
     build:
-      context: https://github.com/jesseduffield/lazydocker.git
-      args:
-        BASE_IMAGE_BUILDER: golang
-        GOARCH: amd64
-        GOARM:
-    image: lazyteam/lazydocker
+      context: ./lazydocker
     container_name: ddev-${DDEV_PROJECT}-lazydocker
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - ./lazydocker:/.config/jesseduffield/lazydocker
+      - /var/run/docker.sock:/var/run/docker-host.sock
+      - ./lazydocker/config:/.config/jesseduffield/lazydocker
     stdin_open: true
     tty: true
+    environment:
+      - DDEV_PROJECT=${DDEV_PROJECT}
     labels:
       com.ddev.site-name: ${DDEV_SITENAME}
       com.ddev.approot: ${DDEV_APPROOT}
