@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Ensure DDEV is installed
+if ! command -v ddev &>/dev/null; then
+  echo "❌ DDEV is not installed. Please install it first."
+  exit 1
+fi
+
+# Ensure DDEV is running
+if ! ddev describe &>/dev/null; then
+  echo "❌ DDEV is not running. Starting DDEV..."
+  ddev start -y >/dev/null || { echo "❌ Failed to start DDEV"; exit 1; }
+fi
+
+# Extract the project name using your improved command
+SITE=$(ddev describe | awk '/Project:/ {print $3}')
+
+# Validate the site name extraction
+if [[ -z "$SITE" ]]; then
+  echo "❌ Unable to retrieve site name. Ensure DDEV is configured correctly."
+  exit 1
+fi
+
+# Run LazyDocker in interactive TUI
+docker exec -it ddev-${SITE}-lazydocker lazydocker
