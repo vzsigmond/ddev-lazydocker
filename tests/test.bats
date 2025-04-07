@@ -37,6 +37,20 @@ setup() {
   assert_success
 }
 
+health_checks() {
+  set -eu -o pipefail
+
+  # Check that the LazyDocker container exists and is running
+  run docker inspect -f '{{.State.Running}}' ddev-${PROJNAME}-lazydocker
+  assert_success
+  assert_output "true"
+
+  # Check that lazydocker is available and not crashing immediately
+  run docker exec ddev-${PROJNAME}-lazydocker lazydocker --version
+  assert_success
+}
+
+
 teardown() {
   set -eu -o pipefail
   ddev delete -Oy ${PROJNAME} >/dev/null 2>&1

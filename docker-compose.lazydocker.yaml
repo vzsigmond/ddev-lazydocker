@@ -14,3 +14,8 @@ services:
     labels:
       com.ddev.site-name: ${DDEV_SITENAME}
       com.ddev.approot: ${DDEV_APPROOT}
+    healthcheck:
+      test: ["CMD", "test", "-S", "/var/run/docker.sock"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
