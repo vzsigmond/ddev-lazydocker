@@ -35,7 +35,7 @@ RUN chmod +x /tmp/gobuild/docker-proxy /tmp/gobuild/lazydocker-launcher
 # --- Final image with everything included
 FROM alpine
 
-RUN apk add --no-cache libc6-compat curl
+RUN apk add --no-cache libc6-compat curl ncurses
 
 COPY --from=builder /tmp/gobuild/lazydocker /bin/lazydocker
 COPY --from=builder /tmp/gobuild/docker-proxy /bin/docker-proxy

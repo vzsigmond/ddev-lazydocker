@@ -11,6 +11,7 @@ services:
     tty: true
     environment:
       - DDEV_PROJECT=${DDEV_PROJECT}
+      - TERM=xterm-256color
     labels:
       com.ddev.site-name: ${DDEV_SITENAME}
       com.ddev.approot: ${DDEV_APPROOT}
