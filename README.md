@@ -2,7 +2,7 @@
 
 This addon integrates [LazyDocker](https://github.com/jesseduffield/lazydocker) into your DDEV project, providing a simple and interactive TUI (Terminal User Interface) for managing Docker containers.
 
-[![DDEV Add-on](https://img.shields.io/badge/DDEV-Add--on-blueviolet)](https://ddev.readthedocs.io/en/stable/users/extend/addon/)
+[![DDEV Add-on](https://img.shields.io/badge/DDEV-Add--on-blueviolet)](https://ddev.readthedocs.io/en/stable/users/extend/additional-services/)
 ![Repo Size](https://img.shields.io/github/repo-size/vzsigmond/ddev-lazydocker)
 ![Latest Tag](https://img.shields.io/github/v/tag/vzsigmond/ddev-lazydocker)
 ![CI](https://github.com/vzsigmond/ddev-lazydocker/actions/workflows/tests.yml/badge.svg)
@@ -57,4 +57,4 @@ Feel free to submit issues or pull requests if you encounter bugs or have sugges
 - [Jesse Duffield](https://github.com/jesseduffield/) – Creator of LazyDocker
 - DDEV Team – For the excellent local development tool
 
-Enjoy a smoother Docker workflow! 🐳✨
+Enjoy a smoother Docker workflow! 🐳
